@@ -1,0 +1,71 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Project Brief: E-Library for Faculty of Computing, University of Port Harcourt
+Tech Stack: Next.js (App Router) + Supabase (Auth, Database, Storage)
+
+Core Features
+User Authentication & Management
+
+Student Sign-Up: Email, name, school ID, department, and level (e.g., 100–500).
+
+Student Sign-In: Email/password or magic link.
+
+Password Recovery: Forgot password flow with email reset.
+
+Profile Management: Edit personal details (name, department, etc.).
+
+Ebook System
+
+Browse Books: Filter by categories (e.g., Software Development, Data Science).
+
+Book Details: Title, author, description, cover image, credit cost (e.g., 500 credits).
+
+Cart & Payment: Add books to cart, checkout using school credits (deducted from balance).
+
+Purchased Books: Accessible in dashboard with download/view permissions.
+
+Student Dashboard
+
+Personal Library: List of purchased ebooks with search/filter.
+
+Recommendations: Related books based on past purchases/categories.
+
+Credit Balance: Display remaining credits (initial balance assigned by admin).
+
+Admin Portal
+
+User Management: View/disable students, assign/reset credits.
+
+Content Management: Add/edit/delete books, upload PDFs/covers, set credit costs.
+
+Category Management: Create/update/delete categories.
+
+Analytics: Track downloads, purchases, and user activity.
+
+Navigation & UX
+
+Homepage: Public view with featured books, login/signup CTA.
+
+Auth Flow: New users redirected to dashboard after sign-up/login.
+
+Responsive Design: Mobile-friendly interface.
+
+Technical Considerations
+Supabase Integration:
+
+Auth (Email/Password, Magic Links).
+
+Database: Tables for users, books, categories, purchases, credits.
+
+Storage: Secure PDF storage with row-level security for downloads.
+
+Next.js:
+
+Protected routes (Middleware for auth checks).
+
+Server Actions for form handling (signup, payment, etc.).
+
+Static/dynamic rendering for books/categories.
