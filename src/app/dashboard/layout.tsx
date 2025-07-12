@@ -6,11 +6,9 @@ import {
   User, 
   Home,
   Library,
-  Star,
   Bell,
   LogOut,
   Menu,
-  X
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

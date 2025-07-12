@@ -8,9 +8,6 @@ import { Navigation } from "@/components/navigation";
 import { 
   ArrowLeft, 
   Star, 
-  Users, 
-  Download, 
-  BookOpen, 
   Coins,
   ShoppingCart,
   Heart,

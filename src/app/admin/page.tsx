@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,22 +12,14 @@ import {
   TrendingUp,
   TrendingDown,
   DollarSign,
-  Eye,
-  Download,
-  Star,
   Clock,
   AlertTriangle,
-  CheckCircle,
   Activity,
-  Calendar,
   BarChart3,
   Plus,
   Settings,
-  Search,
-  Filter,
   ChevronRight,
   UserCheck,
-  UserX,
   Upload
 } from "lucide-react";
 
@@ -144,7 +136,6 @@ const quickStats = [
 ];
 
 export default function AdminDashboardPage() {
-  const [timeRange, setTimeRange] = useState("7d");
 
   const getActivityIcon = (type: string) => {
     switch (type) {
@@ -182,7 +173,7 @@ export default function AdminDashboardPage() {
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
           <p className="text-gray-600 mt-1">
-            Welcome back! Here's what's happening with your e-library today.
+            Welcome back! Here&apos;s what&apos;s happening with your e-library today.
           </p>
         </div>
         

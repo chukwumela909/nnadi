@@ -71,7 +71,7 @@ export default function LoginPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log("Login successful:", formData);
     } catch (error) {
-      setErrors({ general: "Invalid email or password. Please try again." });
+      setErrors({ general: `Invalid email or password. Please try again. ${error}` });
     } finally {
       setIsLoading(false);
     }
@@ -94,7 +94,7 @@ export default function LoginPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setMagicLinkSent(true);
     } catch (error) {
-      setErrors({ general: "Failed to send magic link. Please try again." });
+      setErrors({ general: `Failed to send magic link. Please try again. ${error}` });
     } finally {
       setIsLoading(false);
     }
@@ -108,7 +108,7 @@ export default function LoginPage() {
         </div>
         <h2 className="text-2xl font-bold mb-4">Check Your Email</h2>
         <p className="text-muted-foreground mb-6">
-          We've sent a magic link to <strong>{formData.email}</strong>. 
+          We&apos;ve sent a magic link to <strong>{formData.email}</strong>. 
           Click the link in your email to sign in instantly.
         </p>
         <div className="space-y-3">
@@ -120,7 +120,7 @@ export default function LoginPage() {
             Back to Login
           </Button>
           <p className="text-sm text-muted-foreground">
-            Didn't receive the email? Check your spam folder or{" "}
+            Didn&apos;t receive the email? Check your spam folder or{" "}
             <button 
               onClick={handleMagicLink}
               className="text-school-blue hover:text-blue-700 font-medium"

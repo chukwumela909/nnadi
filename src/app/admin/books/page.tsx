@@ -2,34 +2,23 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   BookOpen,
   Search,
-  Filter,
   Plus,
   Edit,
-  Trash2,
   Eye,
-  Upload,
   Download,
   Star,
   Clock,
   CheckCircle,
   XCircle,
   TrendingUp,
-  Calendar,
-  DollarSign,
-  Users,
-  FileText,
-  Image,
-  Tag,
   ChevronLeft,
   ChevronRight,
-  MoreHorizontal,
-  AlertTriangle,
-  Globe
+  AlertTriangle
 } from "lucide-react";
 
 // Mock books data
@@ -212,14 +201,6 @@ export default function BooksManagementPage() {
         ? prev.filter(id => id !== bookId)
         : [...prev, bookId]
     );
-  };
-
-  const handleSelectAll = () => {
-    if (selectedBooks.length === paginatedBooks.length) {
-      setSelectedBooks([]);
-    } else {
-      setSelectedBooks(paginatedBooks.map(book => book.id));
-    }
   };
 
   const getStatusBadge = (status: string) => {

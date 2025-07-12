@@ -15,7 +15,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Faculty of Computing's digital library providing access to thousands of 
+              Faculty of Computing&apos;s digital library providing access to thousands of 
               academic resources, textbooks, and research papers for students and faculty.
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">

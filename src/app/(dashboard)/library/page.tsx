@@ -16,11 +16,11 @@ import {
   Download,
   Eye,
   Star,
-  Clock,
+  // Clock,
   SortAsc,
   BookOpen,
   Calendar,
-  Tag,
+  // Tag,
   MoreHorizontal
 } from "lucide-react";
 

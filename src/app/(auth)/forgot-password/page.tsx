@@ -62,7 +62,7 @@ export default function ForgotPasswordPage() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setEmailSent(true);
     } catch (error) {
-      setErrors({ general: "Failed to send reset email. Please try again." });
+      setErrors({ general: `Failed to send reset email. Please try again. ${error}` });
     } finally {
       setIsLoading(false);
     }
@@ -75,7 +75,7 @@ export default function ForgotPasswordPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       // Email resent successfully
     } catch (error) {
-      setErrors({ general: "Failed to resend email. Please try again." });
+      setErrors({ general: `Failed to resend email. Please try again. ${error}` });
     } finally {
       setIsLoading(false);
     }
@@ -90,7 +90,7 @@ export default function ForgotPasswordPage() {
         
         <h2 className="text-2xl font-bold mb-4">Check Your Email</h2>
         <p className="text-muted-foreground mb-6 leading-relaxed">
-          We've sent password reset instructions to{" "}
+          We&apos;ve sent password reset instructions to{" "}
           <strong className="text-foreground">{formData.email}</strong>
         </p>
         
@@ -101,7 +101,7 @@ export default function ForgotPasswordPage() {
               <h3 className="font-semibold text-blue-800 mb-1">Security Notice</h3>
               <p className="text-blue-700 text-sm">
                 The reset link will expire in 1 hour for your security. 
-                If you don't see the email, check your spam folder.
+                If you don&apos;t see the email, check your spam folder.
               </p>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function ForgotPasswordPage() {
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold mb-2">Forgot Password?</h1>
         <p className="text-muted-foreground leading-relaxed">
-          No worries! Enter your email address and we'll send you instructions to reset your password.
+          No worries! Enter your email address and we&apos;ll send you instructions to reset your password.
         </p>
       </div>
 

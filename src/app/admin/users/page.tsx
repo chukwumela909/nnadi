@@ -7,8 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Users,
   Search,
-  Filter,
-  Plus,
   Edit,
   Trash2,
   Ban,
@@ -18,18 +16,10 @@ import {
   Download,
   Eye,
   UserPlus,
-  UserMinus,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
   GraduationCap,
   School,
-  MoreHorizontal,
   AlertTriangle,
   TrendingUp,
-  TrendingDown,
-  Clock,
   ChevronLeft,
   ChevronRight
 } from "lucide-react";

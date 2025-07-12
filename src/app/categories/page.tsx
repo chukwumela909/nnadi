@@ -110,7 +110,7 @@ export default function CategoriesPage() {
         {/* CTA Section */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-school-blue to-blue-700 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-2">Can't Find What You're Looking For?</h3>
+            <h3 className="text-2xl font-bold mb-2">Can&apos;t Find What You&apos;re Looking For?</h3>
             <p className="mb-6 opacity-90">
               Our library is constantly growing. Suggest new books or categories to help us serve you better.
             </p>

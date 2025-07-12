@@ -162,7 +162,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </div>
             <h3 className="text-xl font-semibold mb-2">No books found</h3>
             <p className="text-muted-foreground mb-6">
-              We're working on adding more books to this category. Check back soon!
+              We&apos;re working on adding more books to this category. Check back soon!
             </p>
             <Button asChild>
               <Link href="/categories">
@@ -222,3 +222,4 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     </div>
   );
 }
+ 

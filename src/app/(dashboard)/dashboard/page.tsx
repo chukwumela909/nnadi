@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -90,8 +90,16 @@ const recommendations = [
   }
 ];
 
-export default function DashboardPage() {
-  const [searchQuery, setSearchQuery] = useState("");
+export default function ResetPasswordPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ResetPasswordPage />
+    </Suspense>
+  );
+}
+
+function ResetPasswordPage() {
+  // const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div className="space-y-8">

@@ -2,23 +2,19 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Tag,
   Search,
   Plus,
   Edit,
-  Trash2,
   Eye,
   BookOpen,
   TrendingUp,
-  Users,
-  Download,
   Star,
   ChevronLeft,
   ChevronRight,
-  MoreHorizontal,
   Code,
   Database,
   Shield,
@@ -28,9 +24,7 @@ import {
   Smartphone,
   Layout,
   CheckCircle,
-  XCircle,
-  AlertTriangle,
-  Clock
+  XCircle
 } from "lucide-react";
 
 // Mock categories data with icons
@@ -174,24 +168,12 @@ const categoryStats = {
   fastestGrowingCategory: "Machine Learning"
 };
 
-const colorOptions = [
-  { name: "Blue", value: "blue", class: "bg-blue-500" },
-  { name: "Green", value: "green", class: "bg-green-500" },
-  { name: "Purple", value: "purple", class: "bg-purple-500" },
-  { name: "Red", value: "red", class: "bg-red-500" },
-  { name: "Orange", value: "orange", class: "bg-orange-500" },
-  { name: "Teal", value: "teal", class: "bg-teal-500" },
-  { name: "Indigo", value: "indigo", class: "bg-indigo-500" },
-  { name: "Gray", value: "gray", class: "bg-gray-500" }
-];
-
 export default function CategoriesManagementPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("order");
-  const [showAddForm, setShowAddForm] = useState(false);
   const categoriesPerPage = 12;
 
   const filteredCategories = mockCategories.filter(category => {
@@ -232,14 +214,6 @@ export default function CategoriesManagementPage() {
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
     );
-  };
-
-  const handleSelectAll = () => {
-    if (selectedCategories.length === paginatedCategories.length) {
-      setSelectedCategories([]);
-    } else {
-      setSelectedCategories(paginatedCategories.map(category => category.id));
-    }
   };
 
   const getStatusBadge = (status: string) => {
@@ -297,7 +271,7 @@ export default function CategoriesManagementPage() {
             Preview Site
           </Button>
           <Button 
-            onClick={() => setShowAddForm(true)}
+            onClick={() => {}}
             className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
           >
             <Plus className="w-4 h-4 mr-2" />

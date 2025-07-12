@@ -7,29 +7,18 @@ import { Badge } from "@/components/ui/badge";
 import { 
   ShoppingCart,
   Search,
-  Filter,
   Download,
   Eye,
   RefreshCw,
   TrendingUp,
-  TrendingDown,
   DollarSign,
-  Users,
   Clock,
   CheckCircle,
-  XCircle,
   AlertTriangle,
-  Calendar,
-  CreditCard,
-  FileText,
   ChevronLeft,
   ChevronRight,
   MoreHorizontal,
-  BookOpen,
-  User,
-  MapPin,
-  Phone,
-  Mail
+  BookOpen
 } from "lucide-react";
 
 // Mock orders data
@@ -177,7 +166,6 @@ export default function OrdersManagementPage() {
   const [statusFilter, setStatusFilter] = useState("All Status");
   const [paymentFilter, setPaymentFilter] = useState("All Methods");
   const [departmentFilter, setDepartmentFilter] = useState("All Departments");
-  const [dateRange, setDateRange] = useState("7d");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedOrders, setSelectedOrders] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("orderDate");

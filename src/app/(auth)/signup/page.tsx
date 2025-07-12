@@ -146,7 +146,7 @@ export default function SignupPage() {
       await new Promise(resolve => setTimeout(resolve, 3000));
       console.log("Signup successful:", formData);
     } catch (error) {
-      setErrors({ general: "Registration failed. Please try again." });
+      setErrors({ general: `Registration failed. Please try again. ${error}` });
     } finally {
       setIsLoading(false);
     }

@@ -3,27 +3,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   BarChart3,
-  TrendingUp,
-  TrendingDown,
   Users,
   BookOpen,
   Download,
   DollarSign,
-  Eye,
-  Calendar,
-  Filter,
   RefreshCw,
   FileText,
-  Clock,
   Star,
-  Globe,
   Smartphone,
   Monitor,
   Tablet,
-  ChevronDown,
   ArrowUpRight,
   ArrowDownRight,
   Activity,
@@ -189,7 +180,6 @@ const userActivity = [
 
 export default function AnalyticsPage() {
   const [timeRange, setTimeRange] = useState("30d");
-  const [selectedMetric, setSelectedMetric] = useState("users");
 
   const currentStats = timeRangeStats[timeRange as keyof typeof timeRangeStats];
 

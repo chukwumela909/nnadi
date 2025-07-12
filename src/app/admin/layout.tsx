@@ -12,7 +12,6 @@ import {
   Settings,
   LogOut,
   Menu,
-  X,
   Crown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";

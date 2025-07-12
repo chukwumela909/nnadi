@@ -10,7 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { 
   User,
-  Mail,
+  // Mail,
   Lock,
   Bell,
   Shield,
@@ -22,12 +22,13 @@ import {
   CheckCircle,
   Settings,
   BookOpen,
-  Download,
+  // Download,
   Star,
   Calendar,
-  GraduationCap,
-  Building
+  //  GraduationCap,
+  // Building
 } from "lucide-react";
+import Image from "next/image";
 
 // Mock user data
 const userData = {
@@ -183,9 +184,11 @@ export default function ProfilePage() {
             <div className="relative">
               <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center">
                 {userData.profileImage ? (
-                  <img 
+                  <Image 
                     src={userData.profileImage} 
                     alt="Profile"
+                    width={96}
+                    height={96}
                     className="w-24 h-24 rounded-full object-cover"
                   />
                 ) : (

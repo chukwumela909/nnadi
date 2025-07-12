@@ -15,7 +15,7 @@ export default function NotFound() {
         <div>
           <h1 className="text-4xl font-bold text-foreground mb-2">Book Not Found</h1>
           <p className="text-muted-foreground">
-            Sorry, the book you're looking for doesn't exist in our library.
+            Sorry, the book you&apos;re looking for doesn&apos;t exist in our library.
           </p>
         </div>
 
